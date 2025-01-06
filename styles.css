@@ -40,10 +40,13 @@ section {
 .project img {
     width: 100%;
     max-width: 300px;
+    max-height: 250px;
     object-fit: cover;
 }
 
 .project-details {
+    width: 100%;
+    background-color: #f4fcff;
     flex: 1;
     padding: 1rem;
 }
@@ -80,6 +83,8 @@ section {
     }
 
     .project-details {
+        padding-left: 0rem;
+        padding-right: 0rem;
         text-align: center;
     }
 }
