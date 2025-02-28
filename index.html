@@ -11,18 +11,27 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <div class="cursor"></div>
     <header>
         <h1 class="fw-bold">Alex Alves</h1>
         <p class="fw-semibold my-3 fs-5 text-white">Web Developer</p>
         <p class="fs-6 fw-medium">I code and design digital experiences that prioritize accessibility and precision.</p>
         <div class="nav">
             <ul class="my-5 p-0">
-                <li class="my-1"><span class="subON">—</span><span>—</span><a href="#about"> ABOUT</a></li>
-                <li><span class="subON">—</span><span>—</span><a href="#experience"> EXPERIENCE</a></li>
-                <li><span class="subON">—</span><span>—</span><a href="#projects"> PROJECTS</a></li>
-                <li><span class="subON">—</span><span>—</span><a href="#skills"> SKILLS</a></li>
+                <li class="my-1"><span class="subON about">—</span><span>—</span><a href="#about" class="subON2 about"> ABOUT</a></li>
+                <li class="my-1"><span class="subON experience">—</span><span>—</span><a href="#experience" class="subON2 experience"> EXPERIENCE</a></li>
+                <li class="my-1"><span class="subON projects">—</span><span>—</span><a href="#projects" class="subON2 projects"> PROJECTS</a></li>
+                <li class="my-1"><span class="subON skills">—</span><span>—</span><a href="#skills" class="subON2 skills"> SKILLS</a></li>
             </ul>
         </div>
+        <ul class="container d-flex m-0 p-0">
+            <li><a href="" target="_blank" rel="noopener noreferrer" style="--var-cor:#2cd46b">
+                <img src="icons/whatsapp.png" class="icon" alt="" srcset="">
+            </a></li>
+            <li><a href="" target="_blank" rel="noopener noreferrer" style="--var-cor:#087ebb">
+                <img src="icons/linkedin.png" class="icon" alt="" srcset="">
+            </a></li>
+        </ul>
     </header>
     <main>
         <section id="about" class="py-4">
@@ -194,19 +203,58 @@
         </section>
     </main>
     <script>
-        window.addEventListener('scroll', () => {
-            const sections = document.querySelectorAll('section');
-            let currentSection = '';
-
-            sections.forEach((section) => {
-                const rect = section.getBoundingClientRect();
-                console.log(rect)
-                if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
-                currentSection = section.id;
+        function navVisual() {
+            for (let i = 0; i in navSections; i++) {
+                if (navSections[i].classList[1] === currentSection) {
+                    navSections[i].style.display = "inline"
+                } else {
+                    navSections[i].style.display = "none"
                 }
-            });
+            }
+            for (let i = 0; i in navNameSections; i++) {
+                console.log(navNameSections[i].classList[1])
+                if (navNameSections[i].classList[1] === currentSection) {
+                    navNameSections[i].style.opacity = "100%"
+                } else {
+                    navNameSections[i].style.opacity = "50%"
+                }
+            }
+        }
+        function secAtual() {
+            sections.forEach((section) => {
+            const rect = section.getBoundingClientRect();
 
-            console.log(`Você está na seção: ${currentSection}`);
+            if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
+                currentSection = section.id;
+            }
+            })      
+        }
+
+
+        // variaveis
+        const sections = document.querySelectorAll('section');
+        const navSections = document.querySelectorAll('.subON'); // controla o --
+        const navNameSections = document.querySelectorAll('.subON2')
+        let currentSection = '';
+        const cursor = document.querySelector('.cursor');
+        // definindo estado inicial
+        secAtual()
+        navVisual();
+
+        // executando func quando evento acionado
+        window.addEventListener('scroll', () => {
+                secAtual()
+                navVisual();
+            });
+        
+        // cursor light
+        document.addEventListener('mousemove', (e) => {
+        const x = e.clientX;
+        const y = e.clientY;
+        
+        cursor.style.left = `${x}px`;
+        cursor.style.top = `${y}px`;
+        console.log(e)
         });
 
     </script>
