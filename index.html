@@ -7,97 +7,114 @@
     <link rel="icon" href="https://raw.githubusercontent.com/xation222/portifolio/refs/heads/main/icons/ico-tec.png" type="image/png">
     <title>Alex Ribeiro Alves Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>Alex Ribeiro Alves Portfolio</h1>
+        <h1 class="fw-bold">Alex Alves</h1>
+        <p class="fw-semibold my-3 fs-5 text-white">Web Developer</p>
+        <p class="fs-6 fw-medium">I code and design digital experiences that prioritize accessibility and precision.</p>
+        <div class="nav">
+            <ul class="my-5 p-0">
+                <li class="my-1"><span class="subON">—</span><span>—</span><a href="#about"> ABOUT</a></li>
+                <li><span class="subON">—</span><span>—</span><a href="#experience"> EXPERIENCE</a></li>
+                <li><span class="subON">—</span><span>—</span><a href="#projects"> PROJECTS</a></li>
+                <li><span class="subON">—</span><span>—</span><a href="#skills"> SKILLS</a></li>
+            </ul>
+        </div>
     </header>
     <main>
-        <section>
-            <h2>My projects</h2>
+        <section id="about" class="py-4">
+            <h2 class="fs-6 my-5 fw-bold sub-min">ABOUT</h2>
+            <p class="fs-6 fw-medium">
+            I'm a developer focused on building accessible, responsive, and pixel-perfect digital experiences. With expertise in JavaScript, TypeScript, React, PHP, MySQL, and WordPress, I create efficient web solutions that prioritize performance, usability, and accessibility.
+            <br><br>
+            Beyond development, I have experience in technical support and data recovery, bringing a technical and strategic perspective to every project. I'm always learning and staying up-to-date with the latest industry best practices.
+            <br><br>
+            When I'm not coding, I enjoy spending time with my two cats and diving into games like Path of Exile and The Legend of Zelda. Whether it's exploring vast fantasy worlds or solving complex programming challenges, I love the thrill of discovery and creativity.
+            <br><br>
+            Whether it's a professional website, an e-commerce store, or a custom system, I'm ready to turn ideas into reality.</p>
+        </section>
+        <section id="experience" class="py-4">
+            <h2 class="fs-6 my-5 fw-bold sub-min">EXPERIENCE</h2>
+            <div class="py-4">
+                <p class="fs-6 fw-medium">
+                    <p class="fs-6 fw-medium m-0 o-50">2023 — Present</p>
+                    <h3 class="fs-5 fw-medium">Freelance Web Developer</h3>
+                    <p class="fs-6 fw-medium">As a freelance web developer, I've built and maintained websites ranging from personal portfolios to e-commerce platforms. I specialize in creating responsive, accessible, and pixel-perfect digital experiences. I'm comfortable working with a variety of technologies, including JavaScript, TypeScript, React, PHP, MySQL, and WordPress, and always strive to deliver efficient and user-friendly solutions.</p>
+                </p>
+            </div>
+            <div class="py-4">
+                <p class="fs-6 fw-medium">
+                    <p class="fs-6 fw-medium m-0 o-50">2014 — Present</p>
+                    <h3 class="fs-5 fw-medium">IT Support Specialist</h3>
+                    <p class="fs-6 fw-medium">Alongside my web development work, I've provided technical support to individuals and businesses, troubleshooting issues with hardware, software, and network configurations. My experience also includes data recovery and offering strategic solutions for IT problems, ensuring smooth operations for clients.</p>
+                </p>
+            </div>
+            <div class="py-4">
+                <p class="fs-6 fw-medium">
+                    <p class="fs-6 fw-medium m-0 o-50">2009 — Present</p>
+                    <h3 class="fs-5 fw-medium">Music Instructor</h3>
+                    <p class="fs-6 fw-medium">For over a decade, I've been teaching music on a one-on-one basis, sharing my passion for the art with students of all ages. I adapt lessons to individual learning styles, whether they are beginners or more advanced learners. I focus on building confidence and creativity through music.</p>
+                </p>
+            </div>
+        </section>
+        <section id="projects" class="py-4">
+            <h2 class="fs-6 my-5 fw-bold sub-min">PROJECTS</h2>
             <!-- Projeto 1 -->
             <div class="project">
-                <img src="https://raw.githubusercontent.com/xation222/snake-python/main/gameplay.gif"
-                    alt="Imagem do Projeto 1">
                 <div class="project-details">
-                    <h3>Project 1</h3>
-                    <p>A simple snake game, with sound and score. Using Python.</p>
-                    <a href="https://github.com/xation222/snake-python" target="_blank">Go to GitHub</a>
-                    <br>
-                    <a href="https://github.com/xation222/snake-python/raw/main/snake.rar" target="_blank">Download the
-                        Game</a>
+                    <div class="md-p">
+                        <h3><a href="https://github.com/xation222/snake-python" target="_blank">Snake, The Game ↗</a></h3>
+                        <p>A simple snake game, with sound and score. Using Python.</p>
+                    </div>
+                    <img src="https://raw.githubusercontent.com/xation222/snake-python/main/gameplay.gif"
+                    alt="Imagem do Projeto 1">
                 </div>
             </div>
             <!-- Projeto 2 -->
             <div class="project">
-                <img src="https://raw.githubusercontent.com/xation222/Som-de-Fundo/refs/heads/main/imagens/read%20me%201.png"
-                    alt="Imagem do Projeto 2">
                 <div class="project-details">
-                    <h3>Project 2</h3>
-                    <p>Background Sound. Overlay audio to create custom ambient sound</p>
-                    <a href="https://github.com/xation222/Som-de-Fundo" target="_blank">Go to GitHub</a>
-                    <br>
-                    <a href="https://xation222.github.io/Som-de-Fundo" target="_blank">Visit the Site</a>
+                    <div class="md-p">
+                        <h3><a href="https://xation222.github.io/Som-de-Fundo" target="_blank">Background Sound ↗</a></h3>
+                        <p>Overlay audio to create custom ambient sound</p>
+                    </div>
+                    <img src="https://raw.githubusercontent.com/xation222/Som-de-Fundo/refs/heads/main/imagens/read%20me%201.png"
+                    alt="Imagem do Projeto 2">
                 </div>
             </div>
             <!-- Projeto 3 -->
             <div class="project">
-                <img src="https://raw.githubusercontent.com/xation222/music-teacher-site/refs/heads/main/imagens/readme.png"
-                    alt="Imagem do Projeto 3">
                 <div class="project-details">
-                    <h3>Project 3</h3>
-                    <p>Music Teacher Website. Created to contact the teacher to music classes.</p>
-                    <a href="https://github.com/xation222/music-teacher-site" target="_blank">Go to GitHub</a>
-                    <br>
-                    <a href="https://xation222.github.io/music-teacher-site" target="_blank">Visit the Site</a>
+                    <div class="md-p">
+                        <h3><a href="https://xation222.github.io/music-teacher-site" target="_blank">Music Teacher ↗</a></h3>
+                        <p>This project showcases a platform designed for personalized music lessons.</p>
+                    </div>
+                    <img src="https://raw.githubusercontent.com/xation222/music-teacher-site/refs/heads/main/imagens/readme.png"
+                    alt="Imagem do Projeto 3">
                 </div>
             </div>
             <!-- Projeto 4 -->
             <div class="project">
-                <img src="https://raw.githubusercontent.com/xation222/RPG_Site/main/imagens/readme.png"
-                    alt="Imagem do Projeto 4">
                 <div class="project-details">
-                    <h3>Project 4</h3>
-                    <p>Yes, i like RPG. This is from a RPG campaign</p>
-                    <a href="https://github.com/xation222/RPG_Site" target="_blank">Go to GitHub</a>
-                    <br>
-                    <a href="https://xation222.github.io/RPG_Site" target="_blank">Visit the Site</a>
-                </div>
-            </div>
-            <!-- Projeto 5 -->
-            <div class="project">
-                <img src="https://raw.githubusercontent.com/xation222/calculadora-online/main/readme.png"
-                    alt="Imagem do Projeto 5">
-                <div class="project-details">
-                    <h3>Project 5</h3>
-                    <p>A online calculator. Using JavaScript.</p>
-                    <a href="https://github.com/xation222/calculadora-online" target="_blank">Go to GitHub</a>
-                    <br>
-                    <a href="https://xation222.github.io/calculadora-online" target="_blank">Visit the Site</a>
-                </div>
-            </div>
-            <!-- Projeto 6 -->
-            <div class="project">
-                <img src="https://raw.githubusercontent.com/xation222/site-loginandposts/main/readme.png"
+                    <div class="md-p">
+                        <h3><a href="https://lista-de-tarefas-react-ten-ecru.vercel.app/" target="_blank">To do List API ↗</a></h3>
+                        <p>Is a simple and efficient web app designed to help you organize your tasks and stay on top of your to-do list.</p>
+                    </div>
+                    <img src="https://raw.githubusercontent.com/xation222/curso-react/refs/heads/main/to-do-list.png"
                     alt="Imagem do Projeto 6">
-                <div class="project-details">
-                    <h3>Project 6</h3>
-                    <p>A site with register and login. Using PHP, need a server PHP, unfortunately github does not
-                        support php sites. </p>
-                    <a href="https://github.com/xation222/site-loginandposts" target="_blank">Go to GitHub</a>
                 </div>
             </div>
             <div class="project">
                 <div class="project-details">
-                    <h3>Other Projects</h3>
-                    <a href="https://github.com/xation222?tab=repositories" target="_blank">Go to GitHub</a>
+                    <h3><a href="https://github.com/xation222?tab=repositories" target="_blank">Other Projects ↗</a></h3>
                 </div>
             </div>
             <!-- Adicione mais projetos aqui -->
         </section>
-        <section>
-            <h2>Skills</h2>
+        <section id="skills" class="py-4">
+            <h2 class="fs-6 my-5 fw-bold sub-min">SKILLS</h2>
             <div class="skills-grid">
                 <!-- Skill 1 -->
                 <div class="skill">
@@ -176,11 +193,22 @@
             </div>
         </section>
     </main>
-    <footer>
-        <p>Contact me: 
-            <a href="mailto:alexalves202008@gmail.com">Email</a> | 
-            <a href="https://wa.me/+5521996693777" target="_blank">WhatsApp</a>
-        </p>
-    </footer>
+    <script>
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section');
+            let currentSection = '';
+
+            sections.forEach((section) => {
+                const rect = section.getBoundingClientRect();
+                console.log(rect)
+                if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
+                currentSection = section.id;
+                }
+            });
+
+            console.log(`Você está na seção: ${currentSection}`);
+        });
+
+    </script>
 </body>
 </html>
