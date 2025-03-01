@@ -120,6 +120,10 @@ li {
     height: 100px;
 }
 
+#projectDesktop {
+    display: none;
+}
+
 /*skills*/
 .skills-grid {
     display: grid;
@@ -218,6 +222,14 @@ li {
         width: 150px;
         height: 90px;
         margin: 32px 0px;
+    }
+
+    #projectDesktop {
+        display: block;
+    }
+
+    #projectMobile {
+        display: none;
     }
 
     h3 {
