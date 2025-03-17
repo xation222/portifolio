@@ -279,6 +279,7 @@
             </div>
         </section>
     </main>
+    <button onclick="mudarIdioma()" class="butaoIdioma"></button>
     <script>
         function navVisual() {
             for (let i = 0; i in navSections; i++) {
@@ -305,6 +306,23 @@
             }
             })      
         }
+        function mudarIdioma() {
+            if (userLang == "en") {
+                userLang = "pt-BR"
+                botaoIdioma.style.backgroundImage = "url('background/en.png')";
+            } else {
+                userLang = "en"
+                botaoIdioma.style.backgroundImage = "url('background/pt-BR.png')";
+            }
+            loadLanguage(userLang)
+        }
+        function definirBackgound(lang) {
+            if (lang  == "en") {
+                botaoIdioma.style.backgroundImage = "url('background/pt-BR.png')";
+            } else {
+                botaoIdioma.style.backgroundImage = "url('background/en.png')";
+            }
+        }
         async function loadLanguage(lang) {
             
             const response = await fetch(`${lang}.json`);
@@ -321,7 +339,8 @@
         const navNameSections = document.querySelectorAll('.subON2')
         let currentSection = '';
         const cursor = document.querySelector('.cursor');
-        const userLang = navigator.language || navigator.userLanguage;
+        let userLang = navigator.language || navigator.userLanguage;
+        const botaoIdioma = document.querySelector('.butaoIdioma')
         // definindo estado inicial
         secAtual()
         navVisual();
@@ -343,6 +362,7 @@
 
         // definindo idioma
         loadLanguage(userLang);
+        definirBackgound(userLang);
     </script>
 </body>
 </html>

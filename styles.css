@@ -19,6 +19,22 @@ p {
 .o-50 {
     opacity: 50%;
 }
+
+.butaoIdioma {
+    position: fixed;
+    right: 1.5rem;
+    top: 1.5rem;
+    height: 30px;
+    width: 50px;
+    background-size: 100% 100%;
+    border-radius: 4px;
+    border: 2px solid rgba(255, 0, 0, 0);
+    box-sizing: border-box;
+}
+
+.butaoIdioma:hover {
+    border: 2px solid #5986f0;
+}
 /*navegação*/
 .nav {
     display: none;
