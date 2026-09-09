@@ -283,7 +283,7 @@
             </div>            
         </section>
     </main>
-    <button onclick="mudarIdioma()" class="butaoIdioma"></button>
+    <a href="index-pt.html" class="butaoIdioma butaoIdiomaBR"></a>
     <script>
         function navVisual() {
             for (let i = 0; i in navSections; i++) {
@@ -309,32 +309,6 @@
                 currentSection = section.id;
             }
             })      
-        }
-        function mudarIdioma() {
-            if (userLang == "en") {
-                userLang = "pt-BR"
-                botaoIdioma.style.backgroundImage = "url('background/en.png')";
-            } else {
-                userLang = "en"
-                botaoIdioma.style.backgroundImage = "url('background/pt-BR.png')";
-            }
-            loadLanguage(userLang)
-        }
-        function definirBackgound(lang) {
-            if (lang  == "en") {
-                botaoIdioma.style.backgroundImage = "url('background/pt-BR.png')";
-            } else {
-                botaoIdioma.style.backgroundImage = "url('background/en.png')";
-            }
-        }
-        async function loadLanguage(lang) {
-            
-            const response = await fetch(`${lang}.json`);
-            const translations = await response.json();
-            const elementsTranslated = document.querySelectorAll(".translation");
-            for (let i = 0; i<elementsTranslated.length; i++) {
-                elementsTranslated[i].innerHTML = translations.data[i];
-            }
         }
 
         // variaveis
@@ -364,9 +338,6 @@
         cursor.style.top = `${y}px`;
         });
 
-        // definindo idioma
-        loadLanguage(userLang);
-        definirBackgound(userLang);
     </script>
 </body>
 </html>
